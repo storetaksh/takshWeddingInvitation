@@ -1004,3 +1004,107 @@ a.btn-primary {
         height: 60rem;
     }
 }
+/* Music Control FAB */
+.music-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--gold);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--text-primary);
+    overflow: hidden;
+}
+
+.music-fab:hover {
+    transform: scale(1.1);
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(212, 175, 55, 0.3);
+}
+
+.music-fab.playing {
+    background: var(--gold-light);
+    color: var(--maroon);
+    border-color: var(--maroon);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+}
+
+.music-icon {
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease;
+}
+
+.music-fab.playing .music-icon {
+    /* transform: scale(0.9); */
+}
+
+/* Music Waves Animation */
+.music-waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.music-fab.playing .music-waves {
+    opacity: 1;
+}
+
+.music-waves span {
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    animation: wave-animation 2s linear infinite;
+    opacity: 0;
+}
+
+.music-waves span:nth-child(1) {
+    width: 30px;
+    height: 30px;
+    animation-delay: 0s;
+}
+
+.music-waves span:nth-child(2) {
+    width: 40px;
+    height: 40px;
+    animation-delay: 0.6s;
+}
+
+.music-waves span:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    animation-delay: 1.2s;
+}
+
+@keyframes wave-animation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}

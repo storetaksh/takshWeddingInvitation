@@ -1,20 +1,20 @@
 {
     "couple": {
         "groom": {
-            "name": "Avanish",
+            "name": "Karan",
             "parents": {
                 "mother": "Smt. Lata Devi",
                 "father": "Sm. Kamal Kapoor"
             }
         },
         "bride": {
-            "name": "Anupma",
+            "name": "Vidhi",
             "parents": {
-                "mother": "Smt. Lata Devi",
-                "father": "Sm. Kamal Kapoor"
+                "mother": "Smt. Hema Shastri",
+                "father": "Sm. Kamesh Shastri"
             }
         },
-        "hashtag": "#AvanishKiAnupma"
+        "hashtag": "#KaranKiVidhi"
     },
     "wedding": {
         "date": "2026-02-04T18:30:00Z",
@@ -53,12 +53,16 @@
         }
     ],
     "contact": {
-        "whatsapp": "919045187480",
-        "instagram": "https://instagram.com/abhikikaanika"
+        "whatsapp": "919341987480",
+        "instagram": "https://instagram.com/takshstore"
     },
     "messages": {
         "inviteText": "With joyful hearts, we invite you to share in our happiness as we begin our new life together. Join us for an evening of love, laughter, and celebration.",
         "thankYou": "Thank you for being part of our journey.",
         "coupleQuote": "Two souls, one heart."
+    },
+    "music": {
+        "url": "assets/music/music.mp3",
+        "autoplay": true
     }
 }
