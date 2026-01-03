@@ -62,7 +62,7 @@
         "coupleQuote": "Two souls, one heart."
     },
     "music": {
-        "url": "assets/music/music.mp3",
+        "url": "assets/music/music.mpeg",
         "autoplay": true
     }
 }

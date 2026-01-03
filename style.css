@@ -1004,6 +1004,7 @@ a.btn-primary {
         height: 60rem;
     }
 }
+
 /* Music Control FAB */
 .music-fab {
     position: fixed;
@@ -1014,7 +1015,7 @@ a.btn-primary {
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--gold);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     cursor: pointer;
     display: flex;
@@ -1045,7 +1046,7 @@ a.btn-primary {
 }
 
 .music-fab.playing .music-icon {
-    /* transform: scale(0.9); */
+    transform: scale(0.9);
 }
 
 /* Music Waves Animation */
@@ -1100,9 +1101,11 @@ a.btn-primary {
         transform: scale(0.5);
         opacity: 0;
     }
+
     50% {
         opacity: 0.5;
     }
+
     100% {
         transform: scale(1.2);
         opacity: 0;
