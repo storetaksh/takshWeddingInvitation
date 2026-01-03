@@ -32,12 +32,41 @@ class MusicController {
                     this.isPlaying = true;
                     this.updateUI();
                 }).catch(error => {
-                    console.log("Autoplay blocked by browser policy. waiting for interaction.");
+                    console.log("Autoplay blocked by browser policy. Waiting for user interaction.");
                     this.isPlaying = false;
                     this.updateUI();
+                    this.addInteractionFallback();
                 });
             }
         }
+    }
+
+    addInteractionFallback() {
+        const attemptPlay = () => {
+            if (!this.isPlaying && this.audio) {
+                this.audio.play().then(() => {
+                    this.isPlaying = true;
+                    this.updateUI();
+                    this.removeInteractionFallback(attemptPlay);
+                }).catch(e => {
+                    // Still failed (maybe interaction wasn't trusted?), keep listeners
+                    console.log("Interaction play failed", e);
+                });
+            } else {
+                this.removeInteractionFallback(attemptPlay);
+            }
+        };
+
+        this.fallbackListener = attemptPlay;
+        ['click', 'scroll', 'touchstart', 'keydown'].forEach(event => {
+            document.addEventListener(event, attemptPlay, { once: true });
+        });
+    }
+
+    removeInteractionFallback(listener) {
+        ['click', 'scroll', 'touchstart', 'keydown'].forEach(event => {
+            document.removeEventListener(event, listener);
+        });
     }
 
     createButton() {
