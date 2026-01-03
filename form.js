@@ -13,7 +13,7 @@ document.querySelector(".rsvp-form").addEventListener("submit", function (e) {
     }
 
     // Get wedding data
-    const weddingData = window.getWeddingData();
+    const weddingData = window.weddingData;
     if (!weddingData) {
         alert("Unable to load wedding information. Please try again.");
         return;

@@ -5,13 +5,12 @@ class MusicController {
         this.init();
     }
 
-    async init() {
+    init() {
         try {
-            // We fetch the data independently to avoid dependency details on data-loader
-            const response = await fetch('wedding-data.json');
-            const data = await response.json();
+            // Use global weddingData
+            const data = window.weddingData;
 
-            if (data.music && data.music.url) {
+            if (data && data.music && data.music.url) {
                 this.setupAudio(data.music.url, data.music.autoplay);
                 this.createButton();
             }

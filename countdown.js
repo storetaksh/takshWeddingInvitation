@@ -6,7 +6,7 @@
 
     function updateCountdown() {
         // Get wedding data
-        const weddingData = window.getWeddingData();
+        const weddingData = window.weddingData;
         if (!weddingData) {
             countdownEl.innerHTML = "Loading...";
             return;
@@ -45,12 +45,7 @@
     `;
     }
 
-    // Wait for data to load before starting countdown
-    const checkDataInterval = setInterval(() => {
-        if (window.getWeddingData()) {
-            clearInterval(checkDataInterval);
-            updateCountdown();
-            setInterval(updateCountdown, 60000); // update every minute
-        }
-    }, 100);
+    // Start countdown immediately
+    updateCountdown();
+    setInterval(updateCountdown, 60000); // update every minute
 })();
