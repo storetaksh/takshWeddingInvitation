@@ -1,40 +1,61 @@
 {
     "couple": {
         "groom": {
-            "name": "Sagar",
+            "name": "Karan",
             "parents": {
-                "mother": "Dimple Bhasin",
-                "father": "Harbhajan Bhasin"
+                "mother": "Smt. Lata Devi",
+                "father": "Sm. Kamal Kapoor"
             }
         },
         "bride": {
-            "name": "Ritika",
+            "name": "Vidhi",
             "parents": {
-                "mother": "Soniya Sahni",
-                "father": "Vijay Sahni"
+                "mother": "Smt. Hema Shastri",
+                "father": "Sm. Kamesh Shastri"
             }
         },
-        "hashtag": "#SagarWedsRitika"
+        "hashtag": "#KaranKiVidhi"
     },
     "wedding": {
-        "date": "2026-01-23T20:00:00",
-        "displayDate": "JANUARY 23rd, 2026"
+        "date": "2026-02-04T18:30:00Z",
+        "displayDate": "FEBRUARY 4th & 5th, 2026"
     },
     "celebrations": [
+        {
+            "name": "Haldi",
+            "date": "Dec 19, 2025",
+            "time": "10:00 AM",
+            "venue": "Poolside Lawns",
+            "showLocation": false
+        },
+        {
+            "name": "Mehendi",
+            "date": "Dec 19, 2025",
+            "time": "4:00 PM",
+            "venue": "Royal Courtyard",
+            "showLocation": false
+        },
+        {
+            "name": "Sangeet",
+            "date": "Dec 19, 2025",
+            "time": "8:00 PM",
+            "venue": "Grand Ballroom",
+            "showLocation": false
+        },
         {
             "name": "Wedding",
             "date": "Jan 23, 2026",
             "time": "8:00 PM",
-            "venue": "Regenta Central The Crystal, Harsh Nagar, Kanpur",
-            "googleMapsUrl": "https://maps.app.goo.gl/5vQTfTrSS1V98UJt5",
-            "mapImage": "assets/images/wedding-map.png",
+            "venue": "Palace Gardens",
+            "googleMapsUrl": "https://maps.google.com/?q=Palace+Gardens",
+            "mapImage": "assets/images/map.png",
             "highlight": true,
             "showLocation": true
         }
     ],
     "contact": {
-        "whatsapp": "",
-        "instagram": ""
+        "whatsapp": "919341987480",
+        "instagram": "https://instagram.com/takshstore"
     },
     "messages": {
         "inviteText": "With joyful hearts, we invite you to share in our happiness as we begin our new life together. Join us for an evening of love, laughter, and celebration.",
@@ -45,5 +66,5 @@
         "url": "assets/music/music.mpeg",
         "autoplay": true
     },
-    "websiteUrl": "https://sagarritika.netlify.app"
+    "websiteUrl": "https://takshweddinginvitedemo.netlify.app"
 }
