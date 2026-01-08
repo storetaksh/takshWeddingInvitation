@@ -40,7 +40,8 @@
             "date": "Dec 19, 2025",
             "time": "8:00 PM",
             "venue": "Grand Ballroom",
-            "showLocation": false
+            "showLocation": false,
+            "dressCode": "Smart Casual"
         },
         {
             "name": "Wedding",
@@ -50,7 +51,8 @@
             "googleMapsUrl": "https://maps.google.com/?q=Palace+Gardens",
             "mapImage": "assets/images/map.png",
             "highlight": true,
-            "showLocation": true
+            "showLocation": true,
+            "dressCode": "Formal Traditional"
         }
     ],
     "contact": {
