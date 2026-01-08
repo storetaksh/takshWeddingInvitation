@@ -5,7 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initLanterns();
   initScrollAnimations();
+  initScrollIndicator();
 });
+
+function initScrollIndicator() {
+  const indicator = document.querySelector(".scroll-indicator");
+  if (!indicator) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      indicator.classList.add("hidden");
+    } else {
+      indicator.classList.remove("hidden");
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  // Check initial state
+  handleScroll();
+}
 
 function initLanterns() {
   const container = document.getElementById("lanterns");

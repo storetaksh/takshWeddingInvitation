@@ -526,17 +526,45 @@ h3 {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 5%;
-    /* Adjusted for new hero layout */
+    bottom: 1dvh;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0.8;
+    opacity: 1;
     animation: bounce 2s infinite;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    /* Ensure this is visible even if names are hidden */
     z-index: 30;
+    transition: opacity 0.5s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
     color: #fff;
-    /* Ensure visibility */
+    text-shadow: 0 6px 4px rgb(0, 0, 0);
+}
+
+.scroll-indicator-text {
+    font-family: var(--font-heading);
+    /* Lancelot */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.scroll-indicator svg {
+    width: 30px;
+    height: 30px;
+    stroke: #fff;
+    stroke-width: 1.5;
+    fill: none;
+    filter: drop-shadow(0 6px 4px rgb(0, 0, 0));
 }
 
 @keyframes bounce {
@@ -551,6 +579,10 @@ h3 {
 
     40% {
         transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
     }
 }
 
