@@ -18,9 +18,18 @@
     },
     "wedding": {
         "date": "2026-01-23T20:00:00",
-        "displayDate": "JANUARY 23rd, 2026"
+        "displayDate": "JANUARY 22nd & 23rd, 2026"
     },
     "celebrations": [
+        {
+            "name": "Engagement",
+            "date": "Jan 22, 2026",
+            "time": "12:00 PM",
+            "venue": "The Bridge Hotel, Kanpur",
+            "googleMapsUrl": "https://maps.app.goo.gl/XcjVP1d9Sj3eJeUXA",
+            "mapImage": "assets/images/engagement-map.png",
+            "showLocation": true
+        },
         {
             "name": "Wedding",
             "date": "Jan 23, 2026",
