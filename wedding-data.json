@@ -18,26 +18,18 @@
     },
     "wedding": {
         "date": "2026-01-23T20:00:00",
-        "displayDate": "JANUARY 22nd & 23rd, 2026",
-        "venue": {
-            "name": "Regenta Central The Crystal",
-            "address": "Harsh Nagar, Kanpur",
-            "googleMapsUrl": "https://maps.app.goo.gl/5vQTfTrSS1V98UJt5"
-        }
+        "displayDate": "JANUARY 23rd, 2026"
     },
     "celebrations": [
-        {
-            "name": "Engagement",
-            "date": "Jan 22, 2026",
-            "time": "12:00 PM",
-            "venue": "The Bridge Hotel, Darshan Purwa, Kanpur"
-        },
         {
             "name": "Wedding",
             "date": "Jan 23, 2026",
             "time": "8:00 PM",
             "venue": "Regenta Central The Crystal, Harsh Nagar, Kanpur",
-            "highlight": true
+            "googleMapsUrl": "https://maps.app.goo.gl/5vQTfTrSS1V98UJt5",
+            "mapImage": "assets/images/wedding-map.png",
+            "highlight": true,
+            "showLocation": true
         }
     ],
     "contact": {

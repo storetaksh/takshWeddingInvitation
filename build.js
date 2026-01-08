@@ -88,19 +88,32 @@ try {
     replaceText('footer-hashtag', weddingData.couple.hashtag);
 
     // === 3. Links ===
-    // === 3. Links ===
-    if (weddingData.wedding.venue.googleMapsUrl) {
-        // More robust regex: finds the 'Get Directions' button regardless of attributes order or existence of target="_blank"
-        const mapLinkRegex = /<a\s+href="[^"]*"\s+class="btn-primary"[^>]*>\s*<span class="btn-text">Get Directions<\/span>\s*<\/a>/i;
-        if (mapLinkRegex.test(html)) {
-            html = html.replace(
-                mapLinkRegex,
-                `<a href="${weddingData.wedding.venue.googleMapsUrl}" class="btn-primary" target="_blank">
-                            <span class="btn-text">Get Directions</span>
-                        </a>`
-            );
-        }
-    }
+    // === 3. Links & Route ===
+    // Re-generate the entire Route section to support multiple locations side-by-side
+    const routeItemsHtml = weddingData.celebrations
+        .filter(c => c.googleMapsUrl && c.showLocation)
+        .map(c => `
+                        <div class="route-item" style="flex: 1; min-width: 280px; max-width: 400px; display: flex; flex-direction: column; align-items: center; gap: 1rem;">
+                            <div class="map-visual-wrapper" style="width: 100%; padding: 0.5rem; background: #fff3db; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                                <img src="${c.mapImage}" alt="${c.name} Map" style="width: 100%; height: auto; border-radius: 12px; display: block;">
+                            </div>
+                            <a href="${c.googleMapsUrl}" class="btn-primary" target="_blank">
+                                <span class="btn-text">Get Directions</span>
+                            </a>
+                        </div>`).join('\n');
+
+    const newRouteSection = `<section id="route" class="pathway-section fade-in">
+                <div class="container">
+                    <h2 class="section-title">See The Route</h2>
+                    <div class="route-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 4rem; margin-top: 2rem; width: 100%;">
+${routeItemsHtml}
+                    </div>
+                </div>
+            </section>`;
+
+    const routeRegex = /<section id="route"[\s\S]*?<\/section>/i;
+    html = html.replace(routeRegex, newRouteSection);
+
     if (weddingData.contact.instagram) {
         html = html.replace(
             /(<a\s+href=")[^"]*("\s+class="footer-link"\s+target="_blank">Instagram<\/a>)/i,
