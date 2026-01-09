@@ -549,14 +549,14 @@ h3 {
     gap: 8px;
 
     color: #fff;
-    text-shadow: 0 6px 4px rgb(0, 0, 0);
+    text-shadow: 0 0 10px rgb(92, 0, 123);
 }
 
 .scroll-indicator-text {
     font-family: var(--font-heading-alt);
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
@@ -571,7 +571,7 @@ h3 {
     stroke: #fff;
     stroke-width: 1.5;
     fill: none;
-    filter: drop-shadow(0 6px 4px rgb(0, 0, 0));
+    filter: drop-shadow(0 0 10px rgb(92, 0, 123));
 }
 
 @keyframes bounce {
