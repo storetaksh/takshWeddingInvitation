@@ -51,7 +51,7 @@
         "coupleQuote": "Two souls, one heart."
     },
     "music": {
-        "url": "assets/music/music.mpeg",
+        "url": "assets/music/music.mp3",
         "autoplay": true
     },
     "websiteUrl": "https://sagarengaged.netlify.app"
