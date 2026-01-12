@@ -28,8 +28,8 @@ try {
     const websiteUrl = weddingData.websiteUrl || '#';
 
     // Format Parents Names
-    const gParents = `${weddingData.couple.groom.parents.father}<br>&<br>${weddingData.couple.groom.parents.mother}`;
-    const bParents = `${weddingData.couple.bride.parents.father}<br>&<br>${weddingData.couple.bride.parents.mother}`;
+    const gParents = `${weddingData.couple.groom.parents.mother}<br>&<br>${weddingData.couple.groom.parents.father}`;
+    const bParents = `${weddingData.couple.bride.parents.mother}<br>&<br>${weddingData.couple.bride.parents.father}`;
 
     // === 1. Meta Tags ===
     const title = `${groomFirst} Weds ${brideFirst} | A Royal Wedding Invite`;
