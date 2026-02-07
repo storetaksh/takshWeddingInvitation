@@ -97,6 +97,7 @@ try {
                             <div class="map-visual-wrapper" style="width: 100%; padding: 0.5rem; background: #fff3db; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                                 <img src="${c.mapImage}" alt="${c.name} Map" style="width: 100%; height: auto; border-radius: 12px; display: block;">
                             </div>
+                            <h3 class="route-venue">${c.venue}</h3>
                             <a href="${c.googleMapsUrl}" class="btn-primary" target="_blank">
                                 <span class="btn-text">Get Directions</span>
                             </a>
@@ -129,6 +130,7 @@ ${routeItemsHtml}
                                 <p class="date">${event.date}</p>
                                 <p class="time">${event.time}</p>
                                 <p class="venue">${event.venue}</p>
+                                ${event.dressCode ? `<p class="dress-code">Dress Code: ${event.dressCode}</p>` : ''}
                             </div>
                         </div>`).join('\n');
 
